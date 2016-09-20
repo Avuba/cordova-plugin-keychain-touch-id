@@ -94,6 +94,7 @@
 	  NSString* message = (NSString*)[command.arguments objectAtIndex:1];
     self.laContext = [[LAContext alloc] init];
     self.MyKeychainWrapper = [[KeychainWrapper alloc]init];
+    self.laContext.localizedFallbackTitle = @"";
 
     BOOL hasLoginKey = [[NSUserDefaults standardUserDefaults] boolForKey:self.TAG];
     if(hasLoginKey){
